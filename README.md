@@ -1,2 +1,2 @@
-# amy_baker_portfolio
+# Jacob Barrera
 BYU-I WDD 330 Portfolio
