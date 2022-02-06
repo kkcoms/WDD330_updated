@@ -1,0 +1,209 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*reset.scss*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*end reset.scss*/
+/* -------------------------------- 
+
+Colors
+
+-------------------------------- */
+/* -------------------------------- 
+
+Fonts
+
+-------------------------------- */
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+body {
+  font-family: "Open+Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", cursive;
+  color: #DFEBF2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
+h3 {
+  font-family: "Merriweather", cursive;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #9BB1BF;
+  padding: 1rem;
+}
+
+p {
+  color: #9BB1BF;
+  padding-top: 0.2rem;
+}
+
+a {
+  color: #26211F;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover {
+  font-size: 1.2em;
+  color: #9BB1BF;
+}
+
+footer p, footer a {
+  font-size: 0.9rem;
+  color: #DFEBF2;
+}
+footer a:hover {
+  font-size: 1.2em;
+  color: #26211F;
+}
+
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+li {
+  padding: 0.5rem 1rem;
+}
+
+footer {
+  width: 100%;
+}
+
+/* -------------------------------- 
+
+Header
+
+-------------------------------- */
+header section {
+  background-color: #9BB1BF;
+  padding: 1rem;
+}
+header img {
+  float: left;
+  width: 40%;
+  clip-path: circle();
+  -webkit-clip-path: circle();
+  margin: 2%;
+  shape-outside: circle();
+}
+header .pic-wraper {
+  filter: drop-shadow(-3px 20px 15px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(-3px 20px 15px rgba(0, 0, 0, 0.5));
+}
+
+/* -------------------------------- 
+
+Main Styling
+
+-------------------------------- */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* -------------------------------- 
+
+footer
+
+-------------------------------- */
+footer {
+  background-color: #9BB1BF;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

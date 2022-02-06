@@ -1,0 +1,11 @@
+@import 'partials/reset';
+@import 'partials/variables'; // variables
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+@import 'partials/typography'; // Typography
+@import 'partials/basic-style';
+@import 'partials/header'; // Header
+@import 'partials/main'; //Main Styling
+@import 'partials/animations'; //Animations and Transitions
+@import 'partials/images'; //image styling
+@import 'partials/footer'; // footer

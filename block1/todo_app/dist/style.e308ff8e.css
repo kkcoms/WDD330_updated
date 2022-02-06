@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*reset.scss*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*end reset.scss*/
+/* -------------------------------- 
+
+Colors
+
+-------------------------------- */
+/* -------------------------------- 
+
+Fonts
+
+-------------------------------- */
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-family: "Abril Fatface", cursive;
+  color: #FBFBF2;
+  letter-spacing: 2.5px;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1rem;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+p {
+  color: #3a435e;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+li {
+  padding: 0.5rem 1rem;
+}
+
+footer {
+  width: 100%;
+}
+
+/* -------------------------------- 
+
+buttons
+
+-------------------------------- */
+.bottomButtons {
+  margin: auto;
+  margin: 2rem 0 0.5rem 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 46.8em) {
+  .bottomButtons {
+    margin: auto;
+    max-width: 80%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .bottomButtons {
+    max-width: 60%;
+  }
+}
+
+#task, #submit, #all, #active, #completed {
+  margin: 0 0.5rem;
+  padding: 1rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  color: #3a435e;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  flex: 1 1 auto;
+}
+
+#submit:hover, #task:hover, #all:hover, #active:hover, #completed:hover {
+  background-color: #7fffd4;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+.fa-trash {
+  color: #FBFBF2;
+  font-size: 0.9rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #3a435e;
+  border: none;
+  border-radius: 30px;
+}
+
+/* -------------------------------- 
+
+Main Styling
+
+-------------------------------- */
+header {
+  background-color: #3a435e;
+  padding: 1rem;
+  margin: auto;
+}
+
+main {
+  background-color: #FBFBF2;
+  padding: 2rem 0 2.5rem 0;
+}
+
+.todo_list {
+  max-width: 90%;
+  padding: 0 1rem;
+  margin: auto;
+  border-radius: 30px;
+}
+@media only screen and (min-width: 46.8em) {
+  .todo_list {
+    max-width: 80%;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .todo_list {
+    max-width: 60%;
+  }
+}
+
+.todo_item {
+  background-color: white;
+  margin: 0.6rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items: stretch;
+  align-items: center;
+  border-radius: 10px;
+  border-bottom: 5px solid #3a435e;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 46.8em) {
+  .todo_item {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .todo_item {
+    margin: 1.5rem 0;
+  }
+}
+
+.todo_item_name {
+  justify-self: start;
+  text-align: left;
+}
+
+/* -------------------------------- 
+
+footer
+
+-------------------------------- */
+footer {
+  background-color: #3a435e;
+  padding: 1rem;
+  margin: auto;
+}
+
+.toDo {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 46.8em) {
+  .toDo {
+    max-width: 80%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .toDo {
+    max-width: 60%;
+  }
+}
+
+
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

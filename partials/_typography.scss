@@ -1,0 +1,78 @@
+/* -------------------------------- 
+
+Fonts
+
+-------------------------------- */
+
+$primary-font: 'Open+Sans', sans-serif;
+$display-font: 'Merriweather', cursive;
+
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+body{
+  font-family: $primary-font;
+}
+h1,
+h2 {
+  font-family: $display-font;
+  color: $color-accent;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding:1rem;
+
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding:0 1rem;
+  
+}
+
+h3{
+    font-family: $display-font;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $color-med;
+    padding:1rem;
+}
+
+p {
+  color: $color-med;
+  padding-top:.2rem;
+    
+}
+
+a {
+  color: $color-darkest;
+  text-decoration: none;
+  @include transition(0.5s);
+    
+    &:hover{
+        font-size: 1.2em;
+        color: $color-med;
+    }
+}
+footer{
+  p, a{
+    font-size: .9rem;
+    color:$color-accent;
+  } 
+  a{
+    &:hover{
+      font-size: 1.2em;
+      color: $color-darkest;
+  }
+}
+}
+
+
+//end typography.scss

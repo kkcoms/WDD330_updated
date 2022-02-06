@@ -1,0 +1,344 @@
+/* Note: The code examples are at the bottom of this page */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*reset.scss*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  max-width: 80%;
+  line-height: 1;
+  margin:0 auto;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*end reset.scss*/
+
+body {
+  font-family: "Open+Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", cursive;
+  color: #DFEBF2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color:#26211F;
+}
+
+h3,h4,h5 {
+  font-family: "Merriweather", cursive;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #9BB1BF;
+  padding: 1rem 1rem .5rem 1rem;
+}
+h4{
+  font-size: 1.3rem;
+}
+h5{
+  font-size: 1.1rem;
+}
+p {
+  color: #26211F;
+  padding-top: 0.2rem;
+}
+
+button{
+  padding:.5rem;
+  margin:.5rem 1rem;
+  border-radius: 5px;
+  background-color: #9BB1BF;
+  color: #26211F;
+}
+
+a {
+  color: #26211F;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover {
+  font-size: 1.2em;
+  color: #9BB1BF;
+}
+
+div{
+  margin:1rem;
+}
+.error{
+  background: #f99;
+  border: #900 1px solid;
+  display: none;
+}
+
+
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.transform, .transition, .animations, .canvas, .svg{
+  display:flex;
+  
+}
+/* Chapter 8 Code Examples */
+#transform_rotate{
+  height:200px;
+  width:200px;
+  background-color: #7fffd4;
+  padding:.5rem;
+
+}
+#transform_rotate h3, #transform_rotate p{
+  text-align: center;
+}
+#transform_rotate:hover{
+  transform: rotate(10deg);
+}
+
+#transform_scale{
+  height:200px;
+  width:200px;
+  background-color: #7fffd4;
+  padding:.5rem;
+
+}
+#transform_scale h3, #transform_scale p{
+  text-align: center;
+
+}
+#transform_scale:hover{
+  transform: scale(1.5, 0.25);
+}
+
+#transform_translate{
+  height:200px;
+  width:200px;
+  background-color: #7fffd4;
+  padding:.5rem;
+  
+}
+#transform_translate h3, #transform_translate p{
+  text-align: center;
+}
+#transform_translate:hover{
+  transform: translate(45px, -45px);
+}
+
+#transform_skew{
+  height:200px;
+  width:200px;
+  background-color: #7fffd4;
+  padding:.5rem;
+  
+}
+#transform_skew h3, #transform_skew p{
+  text-align: center;
+}
+#transform_skew:hover{
+  transform: skew(15deg, 4deg);
+}
+
+#transform_combo{
+  height:200px;
+  width:200px;
+  background-color: #7fffd4;
+  padding:.5rem;
+  
+}
+#transform_combo p{
+  text-align: center;
+}
+#transform_combo:hover{
+  transform:rotate(-45deg) translate(100px, 60px) scale(1.5) skew(-25deg, -5deg);
+  
+}
+
+/* Transition examples */
+
+#transition1{
+  height:200px;
+  width:200px;
+  padding:.5rem;
+  transition: all 1.5s ease-out;
+}
+#transition1 h4{
+  text-align: center;
+}
+#transition1.still{
+  background-color: #7fffd4;
+  transform: rotate(0);
+}
+#transition1.move{
+  background-color: rgb(128,0,128);
+  transform: rotate(360deg);
+}
+
+#transition2{
+  height:200px;
+  width:200px;
+  padding:.5rem;
+  background-color: #7fffd4;
+  transition: all 1.5s ease-out;
+}
+#transition2 h4{
+  text-align: center;
+}
+#transition2.still{
+  border-radius: 0;
+  transform: scale(1);
+}
+#transition2.move{
+  border-radius: 50%;
+  transform: scale(.5);
+}
+
+#transition3{
+  height:200px;
+  width:200px;
+  padding:.5rem;
+  background-color: #7fffd4;
+  transition: all 1.5s ease-out;
+}
+#transition3 h4{
+  text-align: center;
+}
+#transition3.still{
+  border-radius: 0;
+  transform: rotate(0) translate(0px, 0px);
+  
+}
+#transition3.move{
+  border-radius: 25px;
+  transform: rotate(360deg) translate(200px, 0px);
+}
+
+/* animation examples */
+#bubble{
+  height:200px;
+  width:200px;
+  padding:.5rem;
+  background-color: #7fffd4;
+  -webkit-animation: animateDiv 6s ease-out 3;
+  animation: animateDiv 6s linear 3;
+}
+
+
+@keyframes animateDiv {
+  100% {
+    border-radius: 50%;
+    transform: translate(100px, -500px) scale(3.5);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  0% {
+    border-radius: 0;
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+    filter: blur(5px)
+  }
+
+}
+/* Chapter 9 animation example */
+#square, #square1 {
+  margin: 100px;
+  padding:1rem;
+  width: 200px;
+  height: 200px;
+  background: #7fffd4;
+}
+
+/* Quiz Ninja Styling */
+.quiz-body{
+  background: rgba(255,255,255,1);
+  margin: 150px 33%;
+  padding: 10px 20px 50px 20px;
+  -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+}
+#question {
+  font-size: 24px;
+}
+#result{
+  color: #fff;
+  margin: 0.2em 0;
+  width: 100%;
+  text-align: center;
+}
+.correct {
+  background-color: #0c0;
+}
+.wrong {
+  color: #fff;
+  background-color: #c00;
+}

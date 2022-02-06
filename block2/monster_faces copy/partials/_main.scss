@@ -1,0 +1,24 @@
+/* -------------------------------- 
+
+Main Styling
+
+-------------------------------- */
+
+// Layout for the block sections
+.body_container, .face_container{
+  border-radius: 10px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin: 1rem;
+  overflow: scroll;
+  background-color: #7fffd4;
+
+  @include MQ(L){
+    margin:1rem auto;
+    max-width: 85%;
+}
+}
+

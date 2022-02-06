@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 4 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Four Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 4</h1>
+    </header>
+    <main>
+      <!-- Chapter 8 notes and code examples -->
+      <section>
+        <h2>Chapter 8: Forms</h2>
+        <div>
+        <h3>Notes</h3>
+        <P>You don't have to only process form information on the backend. It's becoming more common to process information in a form on the front end with JavaScript.</P>
+
+        <h4>Events</h4>
+        <ul>
+          <li><p>The focus event occurs when an element is focused on. </p></li>
+          <li><p>The blur event occurs when the user moves the focus away from the form element.</p></li>
+          <li><p>The change event occurs when the user moves the focus away from the form elementafter changing it</p></li>
+          <li><p>The submit event occurs when the form is submitted.</p>
+          <p>"Usually, this will send the content of the form to the server to be processed, but we can use JavaScript to intercept the form before it's sent by adding a submit event listener."</p></li>
+        </ul>
+
+        <h4>Form Controls</h4>
+        <ul>
+          <li><h5>Input</h5>
+            <ul>
+              <li><h5>Types Of Input Fields</h5></li>
+              <li>The default is text</li>
+              <li>Passwords</li>
+              <li>Checkbox</li>
+              <li>Radio Button</li>
+              <li>Hidden Input Field</li>
+              <li>File Input Fields</li>
+              <li>There are other inputs such as number telephone and calendar that aren't as widely supported. Use them still because they will just show a text input if they aren't supported</li>
+            </ul>
+          </li>
+          <li><h5>select</h5> menus for drop-down lists of options</li>
+          <li><h5>textarea</h5> elements for longer text entry</li>
+          <li><h5>button</h5> elements for submitting and resetting forms</li>
+        </ul>
+      </div>
+
+      <!-- Code Examples -->
+      <div>
+        <h3>Code Examples</h3>
+        <h4>Search Bar</h4>
+        <form name='search' action='/search'>
+          <input name='searchInput'>
+          <button type='submit'>Search</button>
+        </form>
+
+        <h4>Form Control Example</h4>
+        <form id='hero'>
+          <fieldset>
+            <legend>Hero Info</legend>
+            <!-- Text Input Example -->
+            <label for='heroName'>Name: 
+              <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32 required>
+            </label>
+                      <!-- Password Example -->
+            <label for='realName'>Real Name:  
+              <input type='password' name='realName' id='realName'></label>  
+                      <!-- Number Example -->
+            <label for='age'>Age: 
+            <input type='number' id='age' name='age' min=0 step=1></label>
+          </fieldset>
+
+                    <!-- Checkbox Example -->
+          <fieldset>
+            <legend>Super Powers:</legend>
+            <label for='flight'>Flight:
+              <input type='checkbox' id='flight' value='Flight' name='powers'>
+          </label>
+          <label for='strength'>Super Strength:
+              <input type='checkbox' id='strength' value='Strength' name='powers'>
+          </label>
+          <label for='speed'>Super Speed:
+          <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+          </label>
+          <label for='energy'>Energy Blasts:
+              <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+              </label>
+          <label for='telekinesis'>Telekinesis:
+              <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+          </label>
+          </fieldset>
+
+          <!-- Radio Button Example -->
+          <fieldset>
+            <legend>What type of hero are you?</legend>
+            <label for='hero'>Hero:<input type='radio' name='category' value='Hero' id='hero'>
+            </label>
+            <label for='villain'>Villain:<input type='radio' name='category' value='Villain' id='villain'>
+            </label>
+            <label for='anti-hero'>Anti-Hero: <input type='radio' name='category' value='Antihero' id='anti-hero'>
+            </label>
+          </fieldset>
+          
+           <!-- drop-down menu example -->
+         <fieldset>
+           <legend>Base of Operations:</legend>
+           <label for='City'>
+            <select name='city' id='city'>
+                <option value='' selected>Choose a City</option>
+                <option value='Metropolis'>Metropolis</option>
+                <option value='Gotham City'>Gotham City</option>
+                <option value='Keystone City'>Keystone City</option>
+                <option value='Coast City'>Coast City</option>
+                <option value='Star City'>Star City</option>
+            </select>
+          </label>
+         </fieldset>
+
+                     <!-- Text Area Example -->
+         <fieldset>
+           <legend>Origin Story:</legend>
+           <label for='origin'>
+            <textarea name='origin' rows='20' cols='60'>Born as Kal-El on the planet Krypton...</textarea>
+        </label>
+         </fieldset>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
+
+      <!-- Quiz Ninja -->
+      <div>
+        <section class='dojo'>
+          <div class='quiz-body'>
+          <header>
+            <h1>Quiz Ninja!</h1>
+            <div id='score'>Score: <strong>0</strong></div>
+          </header>
+          <div id='question'></div>
+          <form id='response'>
+            <input name='answer' type='text'>
+            <button type='submit'>Submit Answer</button>
+        </form>
+          <div id='result'></div>
+          <div id='info'></div>
+          <button id='start'>Click to Start</button>
+          </div>
+        </section>
+      </div>
+      </section>
+
+      <!-- Chapter 12 Notes -->
+      <section>
+        <h2>Chapter 12: OOP</h2>
+        <div>
+          <h3>Notes</h3>
+          <p>I can create new objects using the object literal notation or by using a constructor function. A constructor function defines the properties and methods of an object. Alternatively, "ES6 introduced the new class declaration syntax that does exactly the same thing as a constructor function, but looks much similar to writing a class in a class-based programming language."</p>
+          <p>If I don't know the name of a constructor function or class, I can still make an instance of its object by using the constructor property like this:  const greenDice = new redDice.constructor(10);
+            greenDice instanceOf Dice
+            true</p>
+          <p>"The prototype can be used to add any new properties and methods after the class has been declared. It should be used to define any properties that will remain the same for every instance of the class."</p>
+          <p>Using mixins in JavaScript is quite different than how I have used them before. The name is a good description of what they do; "A mixin is a way of adding properties and methods of some objects to another object without using inheritance. It allows more complex objects to be created by 'mixing' basic objects together."</p>
+          <p>This paragraph explains when to use a mixin and when to use inheritance well. :
+            "One way to think about the difference between prototypal inheritance and inheritance from mixin objects is to consider whether an object is something or whether it has something. For example, a tank is a vehicle, so it might inherit from a Vehicle prototype. The tank also has a gun, so this functionality could be added using a gun mixin object. This gives us extra flexibility, since other objects might also use a gun, but not be a vehicle, for example, a soldier object. The soldier object might inherit from a Human prototype and also have the gun mixin."</p>
+          <p>I can use the return statement: return this; When I do, it allows me to chain methods together on one line. 
+            "It's worth keeping in mind that if a method lacks a meaningful return value, it might as well return this so that chaining is possible."</p>
+          <h4>Dealing with global scope when using this:</h4>
+          <ul>
+            <li>
+              <p>One solution is to set the variable  "that"  to equal "this" before the nested function. </p>
+              <p>superman.findFriends = function(){
+                const that = this;
+                this.friends.forEach(function(friend) {
+                    console.log(`${friend.name} is friends with ${that.name}`);
+                } ); }</p>
+            </li>
+            <li>
+              <p>Another solution is to use the bind() method, here is an example:</p>
+              <p>superman.findFriends = function() {
+                this.friends.forEach(function(friend) {
+                    console.log(`${friend.name} is friends with ${this.name}`);
+                }.bind(this);)}</p>
+            </li>
+            <li>
+              <p>Alternatively, I could use for-of instead of forEach(), for-of does not require a nested function to be used, so "this" remains bound to the superman object:</p>
+              <p>superman.findFriends = function() {
+                for(const friend of this.friends) {
+                    console.log(`${friend.name} is friends with ${this.name}`);
+                };}</p>
+            </li>
+            <li>
+              <p>Lastly, I could use an arrow function because they don't have their own "this" context. "So this remains bound to the original object making the function call:"</p>
+              <p>superman.findFriends = function() {
+                this.friends.forEach((friend) => {
+                    console.log(`${friend.name} is friends with ${this.name}`);
+                } );}</p>
+            </li>
+            </ul>
+            <p>The author advocates "creating small objects that describe single tasks or behaviors" and using a mixin function to combine them into more complex objects if needed. </p>
+            <p>He also recommends keeping inheritance chains short: "A good rule of thumb is only to inherit once, keeping the inheritance chain to just two objects makes unpicking any issues far easier."</p>
+        </div>
+        
+        <div>
+          <h3>Code Examples</h3>
+          <!-- Make an object -->
+          <div>
+            <h4>Make An Object</h4>
+            <button id = "turtleButton" onclick="dis(leo.attack())">New Turtle</button>
+            <div id = "turtle"></div>
+            <div id = "turtleName"></div>
+            <div id = "turtleName2"></div>
+          </div>
+          
+          <div>
+            <h1>Quiz Ninja!</h1>
+            <div id='timer'>Time: <strong>20</strong></div>
+            <div id='score2'>Score: <strong>0</strong></div>
+            <div id='question2'></div>
+            <div id='response2'></div>  
+            <div id='result2'></div>
+            <div id='info2'></div>
+            <button id='start2'>Click to Start</button>
+          </div>
+        </div>
+      </section>
+
+        <!-- Chapter 15 Modular Javascript -->
+        <section>
+          <h2>Chapter 15: Modular Javascript</h2>
+          <p>"A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. This helps to keep code organized in separate, reusable files, which improves code maintainability. The code in a module should have a single purpose, and group together functions with distinct functionality."</p>
+          <ul>
+            <li><h4>Importing and Exporting Modules</h4></li>
+            <li><p>functions in a module have to be exported to be used by another file like this: export const PI = 3.1415926;
+              Then they have to be imported like this:</p>
+              <p>import { PI } from './pi.js';</p></li>
+            <li><p>I can also export single variables as a default value like this:</p>
+              <p>const PI = 3.145926;</p>
+              <p>export default PI;</p>
+              <p>They are imported like this: import PI from './pi.js';</p></li>
+            <li><p>"The big difference with default exports is that you don't need to use curly braces or make any mention of the value that is being imported, making the statement read more elegantly."</p></li>
+
+          </ul>
+
+        </section>
+          
+
+          
+        </div>
+
+      </section>
+   
+
+    </main>
+    <script src = "scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 10 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Ten Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 10</h1>
+    </header>
+    <main>
+      <!-- Chapter 10 notes and code examples -->
+      <section>
+        <h2>Client-side form validation</h2>
+        <p>"Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls."</p>
+        <p>"Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data."</p>
+        <h3>Why Validate Forms?</h3>
+        <ul>
+          <li>We want to get the right data, in the right format.</li>
+          <li>We want to protect our users' data</li>
+          <li>We want to protect ourselves.</li>
+        </ul>
+        <h3>Types of Form Validation</h3>
+        <ul>
+          <li>
+            <h4>Built-in form validation</h4>
+            <p> Uses HTML5 form validation features. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</p>
+            <form>
+              <fieldset>
+                <legend>Colors</legend>
+                <label for="choose">What is your favorite color? (required) </label>
+                <input id="choose" name="i_like" required>
+                <button>Submit</button>
+              </fieldset>
+            </form>
+          </li>
+          <li>
+            <h4>JavaScript</h4>
+            <p> validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).</p>
+            <p>You must use JavaScript if you want to take control over the look and feel of native error messages or to deal with legacy browsers that do not support HTML's built-in form validation
+            </p>
+            <h5>Constraint validation API</h5>
+            <p>You may want to impose more complex constraints, or to provide clearer reporting of validation failures than the defaults. This can be done using the Constraint Validation API.</p>
+            <p>"Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages, but it always requires you to think carefully about the user. Always remember to help your users correct the data they provide."</p>
+            <form>
+              <label for="mail1">I would like you to provide me with an e-mail address:</label>
+              <input type="email" id="mail1" name="mail1">
+              <button>Submit</button>
+            </form>
+            <form novalidate>
+              <p>
+                <label for="mail">
+                  <span>Please enter an email address:</span>
+                  <input type="email" id="mail" name="mail" required minlength="8">
+                  <span class="error" aria-live="polite"></span>
+                </label>
+              </p>
+              <button>Submit</button>
+            </form>
+          </li>
+        </ul>
+
+      </section>
+      <!-- End Chapter 10 -->
+
+      <section>
+        <h2>Using Fetch</h2>
+        <p>""The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+        <h3>Processing a text file line by line</h3>
+        <p>"The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications."</p>
+        <h3>Supplying your own request object</h3>
+        <p>Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument:</p>
+        <p>Request() accepts exactly the same parameters as the fetch() method. You can even pass in an existing request object to create a copy of it</p>
+        <h3>Headers</h3>
+        <p>"The Headers interface allows you to create your own headers object via the Headers() constructor. A headers object is a simple multi-map of names to values:"</p>
+       
+
+      </section>
+    
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src = "scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* -------------------------------- 
+
+Main Styling
+
+-------------------------------- */
+//header
+header{
+  background-color:$color-darkest;
+  padding:1rem;
+  margin:auto;   
+}
+main{
+  background-color: $color-light;
+  padding:2rem 0 2.5rem 0;
+}
+
+// Layout for the block sections
+.todo_list{
+  max-width: 90%;
+  padding:0 1rem;
+  margin: auto;
+  border-radius: 30px;
+
+  @include MQ(M){
+    max-width: 80%;
+  }
+
+  @include MQ(L){
+    max-width: 60%;
+  }
+  
+}
+.todo_item{
+  background-color: white;
+  margin:.6rem 0;
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items:stretch;
+  align-items: center;
+  border-radius: 10px;
+  border-bottom: 5px solid $color-darkest;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+  @include MQ(M){
+    margin:1rem 0;
+  }
+
+  @include MQ(L){
+    margin:1.5rem 0;
+  }
+}
+.todo_item_name{
+  justify-self: start;
+  text-align: left;
+}
+

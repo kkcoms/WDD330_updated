@@ -1,0 +1,40 @@
+/* -------------------------------- 
+
+Fonts
+
+-------------------------------- */
+
+$primary-font: 'Source Sans Pro', sans-serif;
+$display-font: 'Abril Fatface', cursive;
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+body{
+  font-family: $primary-font;
+}
+h1{
+  font-family: $display-font;
+  color:$color-light;
+  letter-spacing: 2.5px;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding:1rem;
+  text-align: center;
+}
+
+
+input{
+  text-align: center;
+}
+p {
+  color:$color-darkest;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+    
+}
+
+//end typography.scss

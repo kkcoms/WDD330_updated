@@ -1,0 +1,36 @@
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+//basic styles.scss
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+	margin: 0 auto;
+	
+}
+main {
+	width: 100%;
+
+}
+
+header {
+	width: 100%;
+
+}
+li{
+	padding:.5rem 1rem;
+}
+footer{
+	width:100%;
+}
+//end basic-styles.scss

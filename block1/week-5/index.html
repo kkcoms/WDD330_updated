@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 5 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Four Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 5</h1>
+    </header>
+    <main>
+      <!-- Chapter 10 notes and code examples -->
+      <section>
+        <h2>Chapter 10 Debugging</h2>
+        <div>
+        <h3>Notes</h3>
+        <p>A note from the book: "Programmer errors are our responsibility, so we must ensure they are minimized as much as possible and fixed promptly. We also should try to limit user errors by predicting any possible interactions that may throw an error, and ensure they are dealt with in a way that doesn't negatively affect the user experience. It might even be argued that user errors are, in fact, also programmer errors, because the program should be designed in a way that prevents the user from making the error." I like the point the author is making about user errors being programmer errors. A well-designed program should take the user into account and be easy to use. </p>
+        <h4>Strict Mode</h4>
+        <p>I can use strict mode ('use strict';) at the top of my JavaScript file or in a function. The recommended way to use it is to put all of my code inside a self-invoking function like this: <br>
+          (function() { <br>
+              'use strict'; <br>
+              // All your code would go inside this function <br>
+          }()); <br>
+          Strict mode "produces more exceptions and warnings and prohibits the use of some deprecated features." This helps programmers find errors. </p>
+
+        <h4>Feature Detection</h4>
+        <p>Feature detection is used so that if a browser doesn't support an API, the function won't be called and won't cause an error. <br>
+          "The recommended way to determine browser support for a feature is to use feature detection. This is done using an if statement to check whether an object or method exists before trying to actually call the method." <br>
+          
+          https://modernizr.com/docs and https://caniuse.com are websites that help with feature detection</p>
+          <h4>Error Objects</h4>
+          <p>Create an error object like this:<br>const error = new Error('Oops, something went wrong');</p>
+          <ul>
+            Objects for specific errors: (copied from the book)
+            <li>EvalError is not used in the current ECMAScript specification and only retained for backwards compatibility. It was used to identify errors when using the global eval() function.</li>
+            <li>RangeError is thrown when a number is outside an allowable range of values.</li>
+            <li> ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.</li>
+            <li>SyntaxError is thrown when there’s an error in the code’s syntax.</li>
+            <li>TypeError is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.</li>
+            <li>URIError is thrown when there’s a problem encoding or decoding the URI.</li>
+            <li>InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.</li>
+          </ul>
+          <h4>Test-driven Development Workflow</h4>
+          <ol>
+            <li>Write tests (that initially fail)</li>
+            <li>Write code to pass the tests</li>
+            <li>Refactor the code</li>
+            <li>Test refactored code</li>
+            <li>Write more tests for new features</li>
+          </ol>
+        
+
+      </div>
+      <!-- Code Examples -->
+      <div>
+        <h3>Code Examples</h3>
+
+        <section class='dojo'>
+          <div class='quiz-body'>
+          
+            <h1>Quiz Ninja!</h1>
+            <div id='timer'>Time: <strong>20</strong></div>
+            <div id='score'>Score: <strong>0</strong></div>
+       
+          <div id='question'></div>
+          <form id='response'>
+            <input name='answer' type='text'>
+            <button type='submit'>Submit Answer</button>
+          </form>  <div id='result'></div>
+          <div id='info'></div>
+          <button id='start'>Click to Start</button>
+          </div>
+        </section>
+        
+      </div>
+      </section>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src = "scripts.js"></script>
+  </body>
+</html>

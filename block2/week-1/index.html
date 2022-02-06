@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 8 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Four Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 8</h1>
+    </header>
+    <main>
+      <!-- Chapter 8 notes and code examples -->
+      <section>
+        <h2>CSS3 Transforms and Transitions</h2>
+        <h3>Transform</h3>
+        <p>"The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page."</p>
+        <section class = "transform">
+          <!-- The css for these is at the bottom of the css file -->
+          <div id = "transform_rotate">
+            <h3>Rotation</h3>
+            <p>The rotate() function rotates an element around the point of origin by a specified angle value.</p>
+          </div>
+          <div id = "transform_scale">
+            <h3>Scaling</h3>
+            <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically.</p>
+          </div>
+          <div id = "transform_translate">
+            <h3>Translate</h3>
+            <p>The translate(x,y) function moves an element x from the left, and y from the top:</p>
+          </div>
+          <div id = "transform_skew">
+            <h3>Skew</h3>
+            <p>The skew(x,y) function specifies a skew along the x and y axes</p>
+          </div>
+          <div id = "transform_combo">
+            <p>You can combine transforms to get the effect you want</p>
+          </div>
+        </section>
+        <h3>Transitions</h3>
+        <p>"Transitions allow the values of CSS properties to change over time, essentially providing simple animations."</p>
+        <ul>Steps To Make A Aimple Transition</ul>
+          <li>Declare the original state of the element in the default style declaration.</li>
+          <li>Declare the final state of your transitioned element.</li>  
+          <li>Include the transition functions in your default style declaration using the transition properties.</li>
+        <section class = "transition">
+          <div id = "transition1" class = "still">
+            <h4>Click Me</h4>
+          </div>
+          <div id = "transition2" class = "still"><h4>Click Me</h4></div>
+          <div id = "transition3" class = "still"><h4>Click Me</h4></div>
+        </section>
+        <h3>Animations</h3>
+        <p>"To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property declaration block"</p>
+        <section class = "animations">
+          <div id = "bubble" class = "still"></div>
+        </section>
+      </section>
+      <!-- End Chapter 8 -->
+
+      <section>
+        <h2>Chapter 12 Canvas, SVG, and Drag and Drop</h2>
+        <h3>Canvas Example</h3>
+        <section class = "canvas">
+          <canvas id="myCanvas" class="myCanvas"  width="200" height="200">
+            Sorry! Your browser doesn’t support Canvas.
+            (Hopefully no one sees this!)
+        </canvas>
+        <canvas id="myCanvas2" class="myCanvas"  width="200" height="200">
+          Sorry! Your browser doesn’t support Canvas.
+          (Hopefully no one sees this!)
+      </canvas>
+      <canvas id="myCanvasCircle" class="myCanvas"  width="200" height="200">
+        Sorry! Your browser doesn’t support Canvas.
+        (Hopefully no one sees this!)
+    </canvas>
+        </section>
+        <h3>SVG Example</h3>
+        <section class = "svg">
+          <svg  height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#7fffd4" />
+          </svg>
+        </section>
+      <p>I loved looking at the section on drag and drop! I need another week to explore it and play around with all that is available.</p>
+      </section>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src = "scripts.js"></script>
+  </body>
+</html>

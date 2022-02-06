@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 3 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Three Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 3</h1>
+    </header>
+    <main>
+      <!-- Chapter 5 Notes and Code Example -->
+      <section class='dojo'>
+          <h2>Chapter 5</h2>
+          <h3>Notes From Chapter 5:</h3>
+                <ul>
+                  <li><p>JavaScript objects are a set of self-contained values and functions.
+                      A function that is the property of an object is called its method. 
+                  </p></li>
+                  <li><p>An object literal is an object that is created by wrapping all its properties and methods in curly braces. Each property is a key-value pair, separated by commas.</p>  
+                  </li>
+                  <li><p>To create an object literal, enter a pair of curly braces after the variable name. 
+                      const game = {};
+                  </p></li>
+                  <li><p>The chapter spent a lot of time teaching regular expressions 
+                      const pattern = /[a-zA-Z]+ing$/; </p></li>
+                  </ul>
+
+          <div class='quiz-body'>
+            <h3>Quiz Ninja!</h3>
+            <button onclick="game.start(quiz)">Quiz Ninja</button>
+          </div>
+      </section>
+
+      <!-- Chapter 6 Notes and Code Example -->
+      <section class='dojoChap6'>
+          <h2>Chapter 6</h2>
+          <h3>Notes From Chapter 6:</h3>
+              <ul>
+                <li> 
+                  <h4>Getting elements:</h4>
+                  <ul>
+                    <li>getElementById()
+                        "Returns a reference to the element with a unique id attribute that is given as an argument"
+                      </li>
+                    <li>getElementByClassName()
+                        "will return a live node list of all elements that have the class name that is supplied as an argument"</li>
+                    <li>getElementsByTagName()
+                        “will return a live node list of all the elements with the tag name that is provided as an argument.”</li>
+                    <li>document.querySelector()
+                        “method allows you to use CSS notation to find the first element in the document that matches a CSS selector provided as an argument. “</li>
+                    <li>document.querySelectorAll()
+                        “returns a node list of all the elements in the document that match the CSS query selector.”
+                    </li>
+                  </ul>
+              </li>
+              <li>
+                  <h4>Getting and Setting Attributes</h4>
+                  <ul>
+                    <li>getAttribute()
+                        “returns the value of the attribute provided as an argument.”</li>
+                    <li>setAttribute()
+                        “changes the value of an element’s attributes. It takes two arguments: the attribute that you wish to change and the new value of that attribute.”</li>
+                  </ul>
+              </li>
+              <li> 
+                <h4>Classes Of An Element</h4>
+                <ul>
+                  <li>className
+                        “allows the class of an element to be set directly. Also, it can be used to find out the value of the class attribute:”
+                        Be careful with this one; it will override all the classes to add the new one.</li>
+                    </li>
+                    <li>classList.add() is a better way to add a class because it won’t override existing classes. 
+                        classList.toggle() will toggle the class on and off</li>
+                  <li>Creating an element
+                      createElement()</li>
+                </ul>
+              </li>
+              <li>
+                <h4>Creating a Text Node</h4>
+                <ul>
+                  <li>createTextNode()
+                      The text goes inside the parenthesis with quotation marks
+                  </li>
+                  <li>when you use createTextNode it doesn't link to it's parent automaticly
+                      textContent does and it's simpler to use.  here is an example of how to create an element and fill it with text:
+                      const flash = document.createElement('li');
+                      flash.textContent = 'Flash';</li>
+                  <li>
+                      This is an example of how to create and fill an element with a function:
+                      function createElement (tag,text) {
+                          const el = document.createElement(tag);
+                          el.textContent = text;
+                          return el
+                      }
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        <div class='quiz-body-chap-6'>
+          <h3>Quiz Ninja!</h3>
+          <button id='start'>Click to Start</button>
+          <!-- <button onclick="game2.start(quiz)">Quiz Ninja</button> -->
+          <div id='score'>Score: <strong>0</strong></div>
+          <div id='question'>Question</div>
+          <div id='result'>Result</div>
+          <div id='info'>Info</div>
+        </div>
+      </section>      
+
+    <!-- Chapter 7 code examples
+    Chapter 7 code example -->
+    <section>
+        <h2>Chapter 7</h2>
+        <h3>Notes From Chapter 7:</h3>
+        <ul>
+          <li>
+              <h4>Event listeners</h4>
+              <ul>
+                <li>Don't use in-line dictation use
+                    addEventListener() </li>
+                <li>
+                    There are lots of different events a full list can be found here 
+                    https://developer.mozilla.org/en-US/docs/Web/Events
+                </li>
+              </ul>
+          </li>
+          <li>
+            <h4>Mouse Events</h4>
+            <ul>
+              <li>click</li>
+              <li>mouseup</li>
+              <li>mousedown</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Keyboard Events</h4>
+            <ul>
+              <li>keydown</li>
+              <li>keypress</li>
+              <li>keyup</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Touch Events</h4>
+            <ul>
+              <li>Make sure to use both touch and mouse events
+                touchstart  (use click instead of this)</li>
+          </li>
+          <li>touchend</li>
+          <li>touchmove</li>
+          <li>touchenter</li>
+          <li>touchleave</li>
+          <li>touchcancel</li>
+            </ul>
+          </li>
+        </ul>
+      <div>
+        <h4>Event Examples</h4>
+        <p id='click'>Click On Me</p>
+        <p id='dblclick'>Double Click On Me</p>
+        <p id='mouse'>Hover On Me</p>
+      </div>
+      <div>
+        <h4>Removing Event Listeners</h4>
+        <p id='once'>A One Time Thing...</p>
+      </div>
+      <div>
+        <h4>Stopping Default Behavior</h4>
+        <p>
+            <a id='broken' href='https://sitepoint.com'>Broken Link</a>
+        </p>
+      </div>
+      <div>
+        <h4>Event Propagation</h4>
+        <ul id='list'>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Event Delegation</h4>
+        <ul id='list1'>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+  </div>
+</section>
+
+      <!-- Callback NASA Example -->
+      <section>
+        <h2>Callback Practice</h2>
+          <button onclick="helloAPOD()">Original AJAX Request</button>
+          <div id="original"></div>
+          <img src="" id="originalImg">
+          <button onclick="helloAPODV2()">This one uses fetch</button>
+          <div id='fetch'></div>
+          <img src="" id="fetchImg">     
+      </section>
+    </main>
+    <script src = "scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  </body>
+</html>

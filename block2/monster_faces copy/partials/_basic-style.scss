@@ -1,0 +1,34 @@
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+//basic styles.scss
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+header {
+	max-width: 100%;
+
+}
+li{
+	padding:.5rem 1rem;
+}
+footer{
+	max-width:100%;
+}
+button{
+	background-color: brown;
+}
+#makeMonster{
+	width:150px;
+	height:75px;
+	background-color: crimson;
+}
+//end basic-styles.scss 

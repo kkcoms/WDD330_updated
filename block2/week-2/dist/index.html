@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 9 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD 330 Week Nine Notes">
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+  <script src="/style.e308ff8e.js"></script></head> 
+    <header>
+        <h1>Week 9</h1>
+    </header>
+    <main>
+      <!-- Chapter 9 notes and code examples -->
+      <section>
+        <h2>The Window Object</h2>
+        <ul>
+          <li>
+            <h3>The Browser Object Model</h3>
+            <p>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.</p>
+          </li>
+
+          <li>
+            <h3>Finding out browser information</h3>
+            <p>"The window object has a number of properties and methods that provide information about the user’s browser"</p>
+          </li>
+          
+          <li>
+            <h3>Browser history</h3>
+            <p>"The window.history property can be used to access information about any previously visited pages in the current browser session."</p>
+          </li>
+          
+          <li>
+            <h3>Controlling windows</h3>
+            <p>"A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its first parameter, the window title as its second parameter, and a list of attributes as the third parameter. This can also be assigned to a variable, so the window can then be referenced later in the code."</p>
+          </li>
+          
+          <li>
+            <h3>Cookies</h3>
+            <p>"Cookies are small files that are saved locally on a user’s computer. They were invented by Netscape as a way of getting round HTTP being a stateless protocol. This means that a browser does not remember anything from one request to another. So every time a user visits a page, nothing about any previous visits is remembered. Cookies can be used to sidestep this problem by storing information that can then be retrieved between requests."</p>
+          </li>
+          
+          <li>
+            <h3>Timing functions</h3>
+            <p>"The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals."</p>
+            <div id="square" class="">
+              <h4>Animation</h4>
+              <p>"The setTimeOut() and setInterval() methods can be used to animate elements on a web page."</p>
+            </div>
+            <div id="square1" onclick="setInterval1(rotate)">
+              <h4>Animation</h4>
+              <p>"The setTimeOut() and setInterval() methods can be used to animate elements on a web page."</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- End Chapter 9 -->
+
+      <section>
+        <h2>HTML5 APIs</h2>
+        <ul>
+          <li>
+            <h3>The development of HTML5 and the JavaScript APIs</h3>
+            <p></p>
+          </li>
+
+          <li>
+            <h3>The data- attribute</h3>
+            <p>"The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. They’re also private to a page, so are not intended to be used by an external service – their sole purpose is to be used by a JavaScript program. This means they’re perfect for adding data that can be used as a hook that the program utilizes to access information about a particular element on the page."</p>
+          </li>
+
+          <li>
+            <h3>HTML5 APIs</h3>
+            <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card. Hardware evolves quickly, and APIs are frequently introduced to give developers access, and control new features that appear in the latest devices.</p>
+            <ul>
+              <li>
+                <h4>local storage</h4>
+                <p>"The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use. This makes it perfect for storing information about users, as well as storing application-specific information that can then be used during future sessions."</p>
+                <p>The fact that only strings can be saved might seem like a restriction at first, but by using JSON, we can store any JavaScript object in local storage.</p>
+                <p>localStorage.setItem('superman', JSON.stringify(hero);</p>
+                <p>superman = JSON.parse(localStorage.getItem('superman'));</p>
+                <p>Link to more information about local storage: https://www.sitepoint.com/an-overview-of-the-web-storage-api/</p>
+              </li>
+
+              <li>
+                <h4>geolocation</h4>
+                <p>"The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. This information can then be used to filter data based on the user's location or speed and direction of travel."</p>
+                <p>"The position object passed to the youAreHere() function has a coords property with a latitude and longitude property, which together give the coordinates of the device. These coordinates can then be used in conjunction with other applications or web services (such as a mapping service) to obtain the user’s exact location"</p>
+                <p>function youAreHere(position) {</p>
+                <p>console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`); }</p>
+              </li>
+              <li>
+                <h4>web workers</h4>
+                <p>"We saw in earlier chapters that JavaScript is a single-threaded language, meaning that only one process can run at one time. Web workers allow processes to be run in the background, adding support for concurrency in JavaScript."</p>
+                <p>Use the worker constructor function to create a new woker</p>
+                <p>const worker = new Worker('task.js');</p>
+                <p>"This function takes the name of another JavaScript file as an argument. In the example, this is a file called 'task.js'. If this file exists, it will be downloaded asynchronously. The worker will only start once the file has finished downloading completely. If the file doesn’t exist, an error is thrown."</p>
+              </li>
+              <li>
+                <h4>multimedia</h4>
+                <p>"Before HTML5, it was notoriously difficult to display audio and video in browsers, and plugins such as Flash often had to be used. HTML5 introduced the audio and video tags used to insert audio and video clips into a web page. It also introduced a Media API for controlling the playback of the clips using JavaScript."</p>
+                <p>"An audio clip can be inserted into a page with the audio tag, using the src attribute to point to the audio file:"</p>
+                  <!-- Audio Example: 
+                    <audio src='/song.mp3' controls>
+                    Your browser does not support the audio element.
+                    </audio> -->
+                <p>"A video clip can be inserted with the video tag, using the src attribute to point to the movie file:"</p>
+                  <!-- Video Example:
+                  <video src='http://movie.mp4' controls>
+                    Your browser does not support the video element.
+                </video> -->
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h3>Drawing shapes with canvas</h3>
+            <p>"The canvas element was introduced to allow graphics to be drawn onto a web page in real time using JavaScript. A canvas element is a rectangular element on the web page. It has a coordinate system that starts at (0,0) in the top-left corner. To add a canvas element to a page, the canvas tag is used specifying a height and width ."</p>
+          </li>
+
+          <li>
+            <h3>Shims and polyfills</h3>
+            <p>"HTML5 APIs progress at a rapid rate ― new APIs are constantly being introduced, and existing APIs often change. Modern browsers are very quick to update and implement many of the changes, but you can’t always guarantee that users will have the most up-to-date browser. This is where a shim or a polyfill comes in handy. These are libraries of code that allow you to use the APIs as usual. They then fill in the necessary code that's not provided natively by the user’s browser."</p>
+          </li>
+
+        </ul>
+
+      </section>
+      <!-- Quiz Ninja for both chapters -->
+      <section>
+        <section class="dojo">
+          <div class="quiz-body">
+            <div>
+              <div id="timer">Time: <strong>20</strong></div>
+              <div id="score">Score: <strong>0</strong></div>
+              <div id="hiScore">High Score: <strong></strong></div>
+              <h1>Quiz Ninja!</h1>
+            </div>
+          <div id="question"></div>
+          <div id="response"></div>
+          <div id="result"></div>
+          <div id="info"></div>
+          <button id="start">Click to Start</button>
+          </div>
+        </section>
+      </section>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="/scripts.b71a6038.js"></script>
+  
+</html>

@@ -1,0 +1,26 @@
+/* -------------------------------- 
+
+footer
+
+-------------------------------- */ 
+footer{
+    background-color:$color-darkest;
+    padding:1rem;
+    margin:auto;   
+}
+.toDo{
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+
+    @include MQ(M){
+        max-width: 80%;
+        justify-content: space-around;
+      }
+    
+      @include MQ(L){
+        max-width: 60%;
+      }
+}
+
+

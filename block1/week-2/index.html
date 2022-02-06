@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 2 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Two Notes">
+  </head> 
+    <header>
+        <h1>Week 2</h1>
+    </header>
+    <main>
+      <section>
+        <ul>
+            <li><h3>Notes From Chapter 2:</h3>
+              <ul>
+                <li><p>"In general, if a value is unlikely to change in your code, then you should declare it using const, and let should only be used for storing values that will need to be reassigned while the program is running." 
+                </p></li>
+                <li><p>"Template literals can be thought of as super-powered strings as they behave in the same way as normal string literals, but with the extra power of string interpolation. For this reason, it is not uncommon to see backticks used to create all strings in ES6 code."</p>  
+                <p>Use backticks instead of quotations for text strings because it will add line breaks for you and you can add JavaScript expressions (variables) without the plus signs like this: const name = `Siri`;
+                    `Hello ${ name }!`;
+                     returns 'Hello Siri!'
+                    
+                     const age = 39; 
+                     `I will be ${ age + 1 } next year`;
+                     returns  'I will be 40 next year'
+                    </p>
+                </li>
+                <li><p>you can create unique ID's with the symbol() function like this:
+                    const uniqueID = Symbol('this is a unique ID');
+                    it's type is a symbol
+                </p></li>
+                <li><p>use or with a hard equal to to write greater than or equal to 8 > 8 || 8 === 8 </p></li>
+                </ul>
+              </li>
+            <li><h3>Notes From Chapter 3:</h3>
+                <ul>
+                  <li> <h4>Arrays</h4>
+                      <p>Spread is new to ES6 you can concatenate an array like this: avengers = [ ...avengers, ...['Hulk', 'Hawkeye']]
+                  </p></li>
+                  <li> <h4>Sets</h4>
+                    <p>
+                        Sets are groups of numbers that can't be duplicated.
+                        You create a new set like this: const list = new Set();
+                        add to the set with list.add() and add a bunch of numbers like this: const numbers = new Set([1,2,3]);
+                </p></li>
+                <li> <h4>  for of loop:</h4>
+                  <p> a for loop to loop through an array that looks like Python. 
+                      It's written like this: 
+                      for(const value of avengers){
+                      console.log(value);
+                      }
+                      (avengers is the name of the array)
+                      It can also loop through a set like this:
+                       for(const letter of letters) {
+                          console.log(letter);
+                      }
+                </p></li>
+                <li><p>"Parameters and arguments are terms that are often used interchangeably to represent values  provided for the function as an input. There is a subtle difference though: any parameters a function  needs are set when the function is defined. When a function is invoked, it is provided with  arguments."</p></li>
+                <li><h4>I practiced arrays and different ways to use and display them in the console </h4></li>
+              </ul>
+            </li>
+            <li><h3>Notes From Chapter 4:</h3>
+              <ul>
+                <li><h4>rest operator</h4>
+                    <p>
+                        "To use the rest operator, simply place three dots in front of the last parameter in a function declaration. This will then collect all the arguments entered into an array. For example, the following function will have access to an array of all the arguments entered:"
+                        Use it like this: 
+                        function rest(...args){
+                            return args;
+                        }
+                      </p>
+                      <p>I practiced this in the scripts file</p>
+                    </li>   
+                <li><h4>Arrow Functions</h4><p>
+                    const square = x => x*x;
+                    const add = (x,y) => x + y;
+                    const hello = () => alert('Hello World!');</p></li>
+                <li><h4>I practiced callbacks quite a bit in the scripts file. I got some of them to work and couldn't figure out others.</h4></li>    
+                <li><a href="quiz.html" target="_blank">Quiz Ninja</a></li>
+              </ul> 
+            </li>
+          </ul>         
+      </section>
+
+      <!-- learning how to use the rest operator and callbacks -->
+      <!-- <section>
+          <button id="meanButton" onclick="show_mean(mean)">Mean</button>
+          <div id="result"></div> 
+
+      </section> -->
+    </main>
+  </body>
+</html>

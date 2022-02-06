@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*reset.scss*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  max-width: 80%;
+  line-height: 1;
+  margin:0 auto;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*end reset.scss*/
+
+body {
+  font-family: "Open+Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", cursive;
+  color: #DFEBF2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color:#26211F;
+}
+
+h3,h4,h5 {
+  font-family: "Merriweather", cursive;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #9BB1BF;
+  padding: 1rem 1rem .5rem 1rem;
+}
+h4{
+  font-size: 1.3rem;
+}
+h5{
+  font-size: 1.1rem;
+}
+p {
+  color: #26211F;
+  padding-top: 0.2rem;
+}
+
+button{
+  padding:.5rem;
+  margin:.5rem 1rem;
+  border-radius: 5px;
+  background-color: #9BB1BF;
+  color: #26211F;
+}
+
+a {
+  color: #26211F;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover {
+  font-size: 1.2em;
+  color: #9BB1BF;
+}
+
+div{
+  margin:1rem;
+}
+.error{
+  background: #f99;
+  border: #900 1px solid;
+  display: none;
+}
+
+/* Quiz Ninja Styling */
+.quiz-body{
+  background: rgba(255,255,255,1);
+  margin: 150px 33%;
+  padding: 10px 20px 50px 20px;
+  -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+}
+#question {
+  font-size: 24px;
+}
+#result{
+  color: #fff;
+  margin: 0.2em 0;
+  width: 100%;
+  text-align: center;
+}
+.correct {
+  background-color: #0c0;
+}
+.wrong {
+  color: #fff;
+  background-color: #c00;
+}
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  width: 100%;
+}
+
+li {
+  padding: 0.5rem 1rem;
+}
+fieldset{
+  margin:1rem .5rem .2rem .5rem;
+  padding: .5rem;
+}
+form p {
+  padding:.5rem;
+  margin:.5rem;
+}
+label{
+  padding:.5rem;
+  margin:.5rem;
+}
+textarea, input{
+  border: 2px solid #9BB1BF;
+  background-color: #DFEBF2;
+  border-radius: 5px;
+}

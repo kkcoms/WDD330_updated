@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 7 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"content="WDD 330 Week Seven Notes">
+    <link rel="stylesheet" href="style.css">
+  </head> 
+    <header>
+        <h1>Week 7</h1>
+    </header>
+    <main>
+      <!-- Chapter 11 notes and code examples -->
+      <section>
+        <h2>Chapter 11 Further Functions</h2>
+          <ul>
+            <li>
+              <h3>Function properties and methods</h3>
+              <p>"The fact that functions are first-class objects means they can have properties and methods themselves."</p>
+              <h4>Call and Apply Methods</h4>
+              <!-- Can't get this form to work
+                <form class = "nameExample">
+                <input type='text' id ='name' name='name' autofocus placeholder='Your Name' required>
+                <button id = "submit" type='submit'><p>Say Hello!</p></button>
+              </form>
+              <ul id="displayName"></ul> -->
+              <ul id="displayName1"></ul>
+              <ul id="displayName2"></ul>
+            </li>
+            <li>
+              <h3>Immediately Invoked function expressions</h3>
+              <p>"An Immediately Invoked Function Expression is an anonymous function that, as the name suggests, is invoked as soon as it's defined. This is done by placing parentheses at the end of the function definition. The function also has to be made into an expression, which is done by placing the whole declaration inside parentheses, like this:"</p>
+              <p>(function(){</p>
+              <p>  const temp = 'World';</p>
+              <p>  console.log(`Hello ${temp}`);</p>
+              <p>  })();</p>
+              <p>These are good for code that you only need once</p>
+              <p>You can also use an IIFE to create a self contained block of code so that you can use variable with the same name and they won't interfere with each other. This can also be dome with ES6 by encasing the code in a block </p>
+            </li>
+            <li>
+              <h3>Self-defining functions</h3>
+              <p>"The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function to a variable that hasthe same name as the function."</p>
+            </li>
+            <li>
+              <h3>Recursive functions</h3>
+              <p>"A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved."</p>
+            </li>
+            <li>
+              <h3>Callbacks</h3>
+              <p>"functions that are passed to other functions as arguments and then invoked inside the function they are passed to."</p>
+              </li>
+            <li>
+              <h3>Promises</h3>
+              <p>"Apromiserepresents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks."</p>
+            </li>
+            <li>
+              <h3>Functions that return functions</h3>
+              <p>FUnctions can also return a function</p>
+            </li>
+            <li>
+              <h3>Closures</h3>
+              <p>"A closure is a reference to a variable that was created inside the scope of another function, but is then kept alive and used in another part of the program."</p>
+            </li>
+          </ul>     
+      </section>
+
+      <!-- Chapter 13  -->
+      <section>
+        <h2>Chapter 13 Ajax</h2>
+        <p>Note: Most of my notes for this chapter are code examples in the js file</p>
+        <ul>  
+          <li>Communicating with the server using the Fetch API</li>
+          <p>"The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch."</p>
+            
+          <li>Receiving data with Ajax</li>
+          <h3>Code Example</h3>
+          <button id='number'>Number Fact</button>
+          <button id='chuck'>Chuck Norris Fact</button>
+          <div id='output'>
+             Ajax response will appear here
+          </div>
+            
+          <li>Sending data with Ajax</li>
+          <h3>Code Example</h3>
+          <title>To Do List</title>
+            <form id='todo' action='https://jsonplaceholder.typicode.com/todos' method='POST'>
+                <input type='text' name='task'  placeholder='Add Task' autofocus required>
+                <button type='submit'>Add Task</button>
+            </form>
+          <li>Form data</li>
+        </ul>
+
+      </section>
+
+      <!-- Code Examples -->
+      <div>
+        <h3>Code Examples</h3>
+
+        <section class='dojo'>
+          <div class='quiz-body'>
+          
+            <h1>Quiz Ninja! Chapter 11</h1>
+            <div id='timer'>Time: <strong>20</strong></div>
+            <div id='score'>Score: <strong>0</strong></div>
+       
+          <div id='question'></div>
+          <form id='response'>
+            <input name='answer' type='text'>
+            <button type='submit'>Submit Answer</button>
+          </form>  <div id='result'></div>
+          <div id='info'></div>
+          <button id='start'>Click to Start</button>
+          </div>
+        </section>
+        
+      </div>
+      
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src = "scripts.js"></script>
+  </body>
+</html>

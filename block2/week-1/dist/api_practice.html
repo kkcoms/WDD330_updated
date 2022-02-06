@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Amy Baker WDD 330 | Week 8 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD 330 Week Four Notes">
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+  <script src="/style.e308ff8e.js"></script></head> 
+  <script>window.onload = function () {
+  var transition1 = document.getElementById('transition1');
+  var transition2 = document.getElementById('transition2');
+  var transition3 = document.getElementById('transition3');
+  var imageContainer = document.getElementById('imageContainer');
+  var videoContainer = document.getElementById('videoContainer');
+  transition1.addEventListener('click', changeClass, false);
+  transition2.addEventListener('click', changeClass, false);
+  transition3.addEventListener('click', changeClass, false);
+};
+
+function test() {
+  var earth = document.getElementById("earth");
+
+  if (earth.className == 'show') {
+    earth.className = "hide";
+  } else {
+    earth.className = "show";
+    helloAPODV2();
+  }
+}
+
+function changeClass() {
+  if (this.className == 'move') {
+    this.className = 'still';
+  } else if (this.className == 'still') {
+    this.className = 'move';
+  }
+}
+
+var Apod_URL = 'https://api.nasa.gov/planetary/apod';
+var apiKey = 'DHWf9NoDJKU9m25RKvQoNiv7ftd9jDzJsWVBVkdV';
+
+function helloAPODV2() {
+  fetch(Apod_URL + '?api_key=' + apiKey, {
+    method: 'GET'
+  }).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    document.getElementById('fetch').innerHTML = json.explanation;
+    console.log(json);
+    earth.className = "hide";
+
+    if (json.media_type == "image") {
+      console.log("image");
+      imageContainer.className = "show";
+      document.getElementById('fetchImg').src = json.url;
+    } else {
+      console.log("video");
+      videoContainer.className = "show";
+      document.querySelector('#player').src = json.url;
+    }
+  }).catch(function (error) {
+    return console.error('error:', error);
+  });
+}</script>
+<style>div, img, iframe{
+        max-width: 90%;
+    }
+
+.hide{
+    display: none;
+}</style>
+
+
+    <header>
+        <h1>NASA Image Of The Day</h1>
+    </header>
+    <main>
+        <section class="transition">
+          <div id="transition1" class="still" onclick="test()"><h4>Click Me</h4></div>
+          <div id="transition2" class="still" onclick="test()"><h4>Click Me</h4></div>
+          <div id="transition3" class="still" onclick="test()"><h4>Click Me</h4></div>
+        </section>
+        <section>
+            <div id="earth" class="hide"><img src="/394.2d1728b6.png" id="spinnerImg"> </div>
+        </section>
+        <section>
+            <h2>Image Of The Day</h2>
+              <div id="fetch"></div>
+              <div id="imageContainer" class="hide"><img src="" id="fetchImg"></div> 
+              <div id="videoContainer" class="hide">
+                <iframe id="player" type="text/html" width="640" height="390" src="" frameborder="0">
+              </iframe></div>
+                
+          </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="/scripts.b71a6038.js"></script>
+  
+</html>

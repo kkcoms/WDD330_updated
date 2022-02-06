@@ -1,0 +1,31 @@
+
+/* -------------------------------- 
+
+Header
+
+-------------------------------- */
+//header.scss
+header {
+
+  section{
+    background-color:$color-med;
+    padding:1rem;
+  }
+
+  img{
+    float: left;
+    width:40%;
+    clip-path: circle();
+    -webkit-clip-path:circle();
+    margin:2%;
+    shape-outside: circle();
+    
+  }  
+  .pic-wraper{
+    filter: drop-shadow(-3px 20px 15px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(-3px 20px 15px rgba(0, 0, 0, 0.5));
+  }
+  
+  }
+
+  //end header.scss

@@ -1,0 +1,43 @@
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+//basic styles.scss
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+header {
+	max-width: 100%;
+
+}
+li{
+	padding:.5rem 1rem;
+}
+
+.button{
+	width:150px;
+	height:75px;
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#transition1{
+	background-color:$blue-monster;
+}
+
+#transition2{
+	background-color:$yellow-monster ;
+}
+
+#transition3{
+	background-color:$green-monster;
+}
+//end basic-styles.scss 
